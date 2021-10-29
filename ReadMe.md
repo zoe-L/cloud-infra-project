@@ -31,7 +31,9 @@ cloud-infra-project-cluster
 ## Pull and retag all images
 Sample commands: 
 docker pull zoexli/projectcli
+
 docker tag zoexli/projectcli gcr.io/cloud-infra-project/projectcli
+
 docker push gcr.io/cloud-infra-project/projectcli
 
 ## Deploy projectcli to GKE in container regitry
