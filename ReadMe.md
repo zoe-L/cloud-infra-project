@@ -21,7 +21,7 @@ https://hub.docker.com/repository/docker/zoexli/sonarkit
 ## Start GKE Cluster
 run the following command to create a Kubernetes cluster
 
-(Screeshot 1)
+![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
 
 gcloud container clusters create \
  --machine-type n1-standard-2 \
@@ -40,5 +40,11 @@ docker tag zoexli/projectcli gcr.io/cloud-infra-project/projectcli
 
 docker push gcr.io/cloud-infra-project/projectcli
 
-## Deploy projectcli to GKE in container regitry
-(Screeshot 2)
+## Deploy projectcli and other images to GKE in container regitry
+![Deploy Image](screenshots/2.PNG?raw=true "deploy_image")
+
+## Screenshot of all containers running
+![All Pods](screenshots/6.PNG?raw=true "all_pods")
+
+## Screenshot of CLI runing
+![CLI](screenshots/5.PNG?raw=true "cli")
