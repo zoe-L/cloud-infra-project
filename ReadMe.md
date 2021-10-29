@@ -12,7 +12,7 @@ Worker: https://hub.docker.com/r/bde2020/hadoop-datanode
 https://hub.docker.com/r/bitnami/spark
 
 ### Jupyter Notebook
-https://hub.docker.com/r/bitnami/jupyterhub
+https://hub.docker.com/r/jupyter/base-notebook/
 
 ### SonarQube and SonarScanner (Included)
 https://hub.docker.com/repository/docker/zoexli/sonarkit
