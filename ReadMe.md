@@ -9,7 +9,7 @@ Master: https://hub.docker.com/r/bde2020/hadoop-namenode/tags
 Worker: https://hub.docker.com/r/bde2020/hadoop-datanode
 
 ### Apache Spark
-https://hub.docker.com/r/bitnami/jupyterhub
+https://hub.docker.com/r/bitnami/spark
 
 ### Jupyter Notebook
 https://hub.docker.com/r/bitnami/jupyterhub
@@ -20,7 +20,9 @@ https://hub.docker.com/repository/docker/zoexli/sonarkit
 
 ## Start GKE Cluster
 run the following command to create a Kubernetes cluster
+
 (Screeshot 1)
+
 gcloud container clusters create \
  --machine-type n1-standard-2 \
  --num-nodes 2 \
