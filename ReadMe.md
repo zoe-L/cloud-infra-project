@@ -42,6 +42,11 @@ docker push gcr.io/cloud-infra-project/projectcli
 
 ## Deploy projectcli and other images to GKE in container regitry
 ![Deploy Image](screenshots/2.PNG?raw=true "deploy_image")
+Repeat the above step for all container images to create deployment for each image
+For the CLI app, special care must be taken to manually edit the YAML file after deployment to run it in interactive mode. (See below)
+![Edit YAML](screenshots/4.PNG?raw=true "edit_yaml")
+For the master node of Hadoop, an environment variable CLUSTER_NAME must be set at deployment. (See below)
+![Set Variable](screenshots/3.PNG?raw=true "set_variable")
 
 ## Screenshot of all containers running
 ![All Pods](screenshots/6.PNG?raw=true "all_pods")
