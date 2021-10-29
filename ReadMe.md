@@ -43,7 +43,7 @@ docker push gcr.io/cloud-infra-project/projectcli
 ## Deploy projectcli and other images to GKE in container regitry
 ![Deploy Image](screenshots/2.PNG?raw=true "deploy_image")
 
-## Screenshot of all containers runing
+## Screenshot of all containers running
 ![All Pods](screenshots/6.PNG?raw=true "all_pods")
 
 ## Screenshot of CLI runing
