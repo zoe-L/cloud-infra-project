@@ -46,7 +46,7 @@ Deploy containers and services using the .yaml files provided. There are in tota
 2. deploy the container using kubectl.
 3. repeat step 1 and 2 for the **load balancing service** to expose the application*
 
-* It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
+*It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
 
 Sample commands:
 ```
