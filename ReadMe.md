@@ -48,7 +48,8 @@ Deploy containers and services using the .yaml files provided. There are in tota
 *It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
 
 Sample commands:
-```gcloud container clusters get-credentials nginx-1-cluster --zone us-central1-a --project cloud-infra-project
+```
+gcloud container clusters get-credentials nginx-1-cluster --zone us-central1-a --project cloud-infra-project
 nano jupyter-notebook.yaml
 kubectl create -f jupyter-notebook.yaml
 nano jupyter-notebook-service.yaml
