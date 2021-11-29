@@ -4,16 +4,16 @@ def main():
   if len(sys.argv)==2:
     print(len(sys.argv[1]))
     if sys.argv[1][0] == "1":
-      print("Apache Hadoop selected.")
+      print("Apache Hadoop selected. Go to http://35.222.102.35/ for the application.")
       exit()
     if sys.argv[1][0] == "2":
-      print("Apache Spark selected.")
+      print("Apache Spark selected. Go to http://34.71.159.122/ for the application.")
       exit()
     if sys.argv[1][0] == "3":
-      print("Jupyter Notebook selected.")
+      print("Jupyter Notebook selected. Go to http://35.222.102.35/ for the application.")
       exit()
     if sys.argv[1][0] == "4":
-      print("SonarQube and SonnarScanner selected.")
+      print("SonarQube and SonnarScanner selected. Go to http://34.135.248.131/ for the application.")
       exit()
   print("command not recognized")
   exit()

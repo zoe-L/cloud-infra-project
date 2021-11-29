@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  creationTimestamp: "2021-11-29T04:08:13Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app: sonarqube
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: GoogleCloudConsole
+    operation: Update
+    time: "2021-11-29T04:08:13Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"service.kubernetes.io/load-balancer-cleanup": {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-11-29T04:08:13Z"
+  name: sonarqube-service
+  namespace: default
+  resourceVersion: "216358"
+  uid: d82da171-f60f-4393-ad50-8632cd8124ba
+spec:
+  clusterIP: 10.64.1.66
+  clusterIPs:
+  - 10.64.1.66
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31268
+    port: 80
+    protocol: TCP
+    targetPort: 9000
+  selector:
+    app: sonarqube
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
