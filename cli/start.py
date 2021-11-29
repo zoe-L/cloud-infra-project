@@ -2,7 +2,6 @@ import sys
 
 def main():
   if len(sys.argv)==2:
-    print(len(sys.argv[1]))
     if sys.argv[1][0] == "1":
       print("Apache Hadoop selected. Go to http://34.71.159.122/ for the application.")
       exit()
