@@ -21,8 +21,6 @@ https://hub.docker.com/r/bitnami/sonarqube
 ## Start GKE Cluster
 run the following command to create a Kubernetes cluster
 
-![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
-
 ```
 gcloud container clusters create \
  --machine-type n1-standard-2 \
@@ -32,14 +30,16 @@ gcloud container clusters create \
 nginx-1-cluster
 ```
 
+![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
+
+
 ## Pull and retag all images
 Sample commands: 
-
+```
 docker pull zoexli/projectcli
-
 docker tag zoexli/projectcli gcr.io/cloud-infra-project/projectcli
-
 docker push gcr.io/cloud-infra-project/projectcli
+```
 
 ## Deploy projectcli and other images to GKE in container regitry
 Deploy containers and services using the .yaml files provided. There are in total 3 steps for deploying each application.
@@ -57,6 +57,7 @@ kubectl create -f jupyter-notebook.yaml
 nano jupyter-notebook-service.yaml
 kubectl create -f jupyter-notebook-service.yaml
 ```
+
 Outcome:
 ![kubectl create](screenshots/kubectl-create.PNG?raw=true "kubectl_create")
 
