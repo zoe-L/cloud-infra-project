@@ -45,7 +45,8 @@ Deploy containers and services using the .yaml files provided. There are in tota
 1. create a local .yaml file using nano editor for the **main application**, and paste the content of .yaml files from this repository into the new local file.
 2. deploy the container using kubectl.
 3. repeat step 1 and 2 for the **load balancing service** to expose the application*
-*It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
+
+* It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
 
 Sample commands:
 ```
@@ -54,6 +55,34 @@ nano jupyter-notebook.yaml
 kubectl create -f jupyter-notebook.yaml
 nano jupyter-notebook-service.yaml
 kubectl create -f jupyter-notebook-service.yaml
+```
+
+
+For Jupyter Notebook and Sonarqube, it is necessary to connect to the containers and do some setup work using bash.
+The commands to use are noted below.
+
+
+For Jupyter Notebook:
+```
+kubectl get pods -o name
+kubectl exec -it <your-jupyter-pod-name> bash
+* After exec into Jupyter pod bash
+jupyter notebook password
+jupyter notebook
+```
+
+For Sonarqube:
+```
+* cd into /opt
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744.zip
+unzip sonar-scanner-cli-4.0.0.1744.zip
+export PATH="/opt/sonar-scanner-4.0.0.1744/bin:$PATH"
+sonar-scanner -Dsonar.login='admin' -Dsonar.password='admin' -Dsonar.projectKey='14848project' -Dsonar.host.url='http://localhost:9000'
+```
+
+Finally, after all applications have been successfully deployed, run the cli using the following command:
+```
+kubectl exec -it <your-cli-pod-name> -- /bin/bash ./start.sh
 ```
 
 ## Screenshot of all containers running
