@@ -90,6 +90,7 @@ sonar-scanner -Dsonar.login='admin' -Dsonar.password='admin' -Dsonar.projectKey=
 ![Deployment_4](screenshots/deployment-4.PNG?raw=true "Deployment_4")
 ![Deployment_5](screenshots/deployment-5.PNG?raw=true "Deployment_5")
 ![Deployment_6](screenshots/deployment-6.PNG?raw=true "Deployment_6")
+![Deployment_7](screenshots/deployment-7.PNG?raw=true "Deployment_7")
 
 Finally, after all applications have been successfully deployed, run the cli using the following command:
 ```
@@ -97,7 +98,11 @@ kubectl exec -it <your-cli-pod-name> -- /bin/bash ./start.sh
 ```
 
 ## Screenshot of all containers running
+
+
 ![All Pods](screenshots/6.PNG?raw=true "all_pods")
 
 ## Screenshot of CLI runing
+
+
 ![CLI](screenshots/5.PNG?raw=true "cli")
