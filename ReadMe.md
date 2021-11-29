@@ -1,5 +1,5 @@
 # Course Project
-## Code Walk-through and de =mo
+## Code Walk-through and demo
 https://www.youtube.com/watch?v=0lnNO4_vp5o
 
 ## Obtaining Docker images
