@@ -1,4 +1,4 @@
-# Project Checkpoint 1
+# Course Project
 ## Obtaining Docker images
 ### Command Line App (Included)
 https://hub.docker.com/repository/docker/zoexli/projectcli
@@ -21,32 +21,33 @@ https://hub.docker.com/r/bitnami/sonarqube
 ## Start GKE Cluster
 run the following command to create a Kubernetes cluster
 
-![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
-
+```
 gcloud container clusters create \
  --machine-type n1-standard-2 \
  --num-nodes 2 \
  --zone us-central1-a \
  --cluster-version latest \
 nginx-1-cluster
+```
+
+![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
 
 
 ## Pull and retag all images
 Sample commands: 
-
+```
 docker pull zoexli/projectcli
-
 docker tag zoexli/projectcli gcr.io/cloud-infra-project/projectcli
-
 docker push gcr.io/cloud-infra-project/projectcli
+```
 
 ## Deploy projectcli and other images to GKE in container regitry
 Deploy containers and services using the .yaml files provided. There are in total 3 steps for deploying each application.
-1. create a local .yaml file using nano editor for the **main application**, and paste the content of .yaml files from this repository into the new local file.
+1. create a local .yaml file using cloud shell and nano editor for the **main application**, and paste the content of .yaml files from this repository into the new local file.
 2. deploy the container using kubectl.
 3. repeat step 1 and 2 for the **load balancing service** to expose the application*
 
-* It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
+*It may be necessary to create a firewall rule, please refer to https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52 for details
 
 Sample commands:
 ```
@@ -56,6 +57,9 @@ kubectl create -f jupyter-notebook.yaml
 nano jupyter-notebook-service.yaml
 kubectl create -f jupyter-notebook-service.yaml
 ```
+
+Outcome:
+![kubectl create](screenshots/kubectl-create.PNG?raw=true "kubectl_create")
 
 
 For Jupyter Notebook and Sonarqube, it is necessary to connect to the containers and do some setup work using bash.
