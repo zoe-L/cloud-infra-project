@@ -43,7 +43,7 @@ docker push gcr.io/cloud-infra-project/projectcli
 
 ## Deploy projectcli and other images to GKE in container regitry
 Deploy containers and services using the .yaml files provided. There are in total 3 steps for deploying each application.
-1. create a local .yaml file using nano editor for the **main application**, and paste the content of .yaml files from this repository into the new local file.
+1. create a local .yaml file using cloud shell and nano editor for the **main application**, and paste the content of .yaml files from this repository into the new local file.
 2. deploy the container using kubectl.
 3. repeat step 1 and 2 for the **load balancing service** to expose the application*
 
