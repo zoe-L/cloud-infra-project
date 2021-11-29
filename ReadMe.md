@@ -78,11 +78,18 @@ jupyter notebook
 For Sonarqube:
 ```
 * cd into /opt
+cd ..
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744.zip
 unzip sonar-scanner-cli-4.0.0.1744.zip
 export PATH="/opt/sonar-scanner-4.0.0.1744/bin:$PATH"
 sonar-scanner -Dsonar.login='admin' -Dsonar.password='admin' -Dsonar.projectKey='14848project' -Dsonar.host.url='http://localhost:9000'
 ```
+![Deployment_1](screenshots/deployment-1.PNG?raw=true "deployment1")
+![Deployment_2](screenshots/deployment-2.PNG?raw=true "deployment2")
+![Deployment_3](screenshots/deployment-3.PNG?raw=true "Deployment3")
+![Deployment_4](screenshots/deployment-4.PNG?raw=true "Deployment_4")
+![Deployment_5](screenshots/deployment-5.PNG?raw=true "Deployment_5")
+![Deployment_6](screenshots/deployment-6.PNG?raw=true "Deployment_6")
 
 Finally, after all applications have been successfully deployed, run the cli using the following command:
 ```
