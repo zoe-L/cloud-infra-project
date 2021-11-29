@@ -1,4 +1,7 @@
 # Course Project
+## Code Walk-through and de =mo
+https://www.youtube.com/watch?v=0lnNO4_vp5o
+
 ## Obtaining Docker images
 ### Command Line App (Included)
 https://hub.docker.com/repository/docker/zoexli/projectcli
