@@ -23,13 +23,14 @@ run the following command to create a Kubernetes cluster
 
 ![Create Cluster](screenshots/1.PNG?raw=true "create_cluster")
 
+```
 gcloud container clusters create \
  --machine-type n1-standard-2 \
  --num-nodes 2 \
  --zone us-central1-a \
  --cluster-version latest \
 nginx-1-cluster
-
+```
 
 ## Pull and retag all images
 Sample commands: 
@@ -56,6 +57,8 @@ kubectl create -f jupyter-notebook.yaml
 nano jupyter-notebook-service.yaml
 kubectl create -f jupyter-notebook-service.yaml
 ```
+Outcome:
+![kubectl create](screenshots/kubectl-create.PNG?raw=true "kubectl_create")
 
 
 For Jupyter Notebook and Sonarqube, it is necessary to connect to the containers and do some setup work using bash.
