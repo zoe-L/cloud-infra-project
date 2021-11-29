@@ -1,4 +1,4 @@
-# Project Checkpoint 1
+# Course Project
 ## Obtaining Docker images
 ### Command Line App (Included)
 https://hub.docker.com/repository/docker/zoexli/projectcli
